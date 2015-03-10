@@ -1,13 +1,15 @@
 void Main()
 {
 	// 100までFizzBuzz
-	FizzBuzzGenerate(100).Dump();
+	FizzBuzzGenerate().Take(100).Dump();
 }
 
 // FizzBuzz作成
-static IEnumerable<string> FizzBuzzGenerate(int count)
+static IEnumerable<string> FizzBuzzGenerate()
 {
-   for (var i = 1; i <= count; i++)
+   int i = 1;
+   // iのoverflowはあえて無視
+   while (true)
    {
        if (i % 15 == 0)
        {
@@ -25,5 +27,6 @@ static IEnumerable<string> FizzBuzzGenerate(int count)
        {
             yield return i.ToString();
        }
+	   i++;
    }
 }
