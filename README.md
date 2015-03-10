@@ -1,2 +1,2 @@
 # fizzbuzz1
-fizzbuzz
+LINQPadに貼り付けて実行するsample
